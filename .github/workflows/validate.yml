@@ -1,0 +1,35 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate metadata.json
+        run: python3 -c "import json; json.load(open('metadata.json')); print('metadata.json OK')"
+
+      - name: Validate contents/config/main.xml
+        run: python3 -c "import xml.dom.minidom as m; m.parse('contents/config/main.xml'); print('main.xml OK')"
+
+      - name: Check QML brace/paren balance
+        run: |
+          for f in contents/ui/*.qml contents/config/*.qml; do
+            python3 -c "
+s = open('$f').read()
+b = s.count('{') - s.count('}')
+p = s.count('(') - s.count(')')
+assert b == 0, f'Unbalanced braces in $f: {b}'
+assert p == 0, f'Unbalanced parens in $f: {p}'
+print('$f OK')
+"
+          done
+
+      - name: Verify package builds
+        run: |
+          chmod +x scripts/package.sh
+          ./scripts/package.sh

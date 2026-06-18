@@ -1,0 +1,14 @@
+{
+    "KPlugin": {
+        "Authors": [{"Email": "satay-myrrhe41@icloud.com", "Name": "Stephan Kirchhoff"}],
+        "Category": "Date and Time",
+        "Description": "A simple taskbar Pomodoro timer for KDE Plasma.",
+        "Icon": "chronometer",
+        "Id": "io.github.stephankirchhoff.simplepomodoro",
+        "License": "PolyForm-Noncommercial-1.0.0",
+        "Name": "Simple Pomodoro",
+        "Version": "1.0",
+        "Website": "https://github.com/stephankirchhoff/simple-pomodoro"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

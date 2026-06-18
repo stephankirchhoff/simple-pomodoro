@@ -1,0 +1,14 @@
+# Built package artifact (rebuild via scripts/package.sh — don't commit it,
+# attach it to GitHub Releases instead)
+*.plasmoid
+
+# Editor / OS noise
+.directory
+*~
+.DS_Store
+.vscode/
+.idea/
+
+# Archives produced while testing
+*.tar.gz
+*.zip

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                           http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+  <group name="General">
+    <entry name="workMinutes" type="Int">
+      <default>25</default>
+    </entry>
+    <entry name="shortBreakMinutes" type="Int">
+      <default>5</default>
+    </entry>
+    <entry name="longBreakMinutes" type="Int">
+      <default>15</default>
+    </entry>
+    <entry name="longBreakInterval" type="Int">
+      <default>4</default>
+    </entry>
+    <entry name="customPresetsJson" type="String">
+      <default>[]</default>
+    </entry>
+    <entry name="autoContinue" type="Bool">
+      <default>false</default>
+    </entry>
+  </group>
+</kcfg>
