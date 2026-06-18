@@ -1,6 +1,6 @@
 # 🍅 Simple Pomodoro
 
-**A simple taskbar Pomodoro timer for KDE Plasma.**
+**A simple taskbar Pomodoro timer for KDE Plasma Taskbar.**
 
 A native Plasma 6 panel widget for the Pomodoro Technique — no separate app,
 no shrunken tray icon, just a clean `MM:SS` readout sitting in your panel at
